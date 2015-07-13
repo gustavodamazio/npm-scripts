@@ -1,0 +1,37 @@
+{
+  "name": "npm-scripts",
+  "version": "0.0.0",
+  "description": "My phenomenal module",
+  "license": "MIT",
+  "repository": "thejameskyle/npm-scripts",
+  "author": {
+    "name": "",
+    "email": "me@thejameskyle.com",
+    "url": "github.com/thejameskyle"
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "major-release": "npm version major && npm publish && git push --follow-tags"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    ""
+  ],
+  "dependencies": {
+    "detect-indent": "^3.0.1",
+    "lodash.find": "^3.2.1",
+    "meow": "^3.3.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
