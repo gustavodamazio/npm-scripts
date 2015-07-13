@@ -1,6 +1,6 @@
 # npm-scripts [![Build Status](https://travis-ci.org/thejameskyle/npm-scripts.svg?branch=master)](https://travis-ci.org/thejameskyle/npm-scripts)
 
-> My phenomenal module
+> Find and install interesting npm scripts.
 
 
 ## Install
@@ -15,8 +15,8 @@ $ npm install --save npm-scripts
 ```js
 var npmScripts = require('npm-scripts');
 
-npmScripts('unicorns');
-//=> unicorns & rainbows
+npmScripts.info('patch-release');
+//=> { "title": "patch-release", ... };
 ```
 
 
@@ -29,40 +29,29 @@ $ npm install --global npm-scripts
 $ npm-scripts --help
 
   Usage
-    npm-scripts [input]
+    npm-scripts [command] [title]
 
   Example
-    npm-scripts
-    unicorns & rainbows
-
-    npm-scripts ponies
-    ponies & rainbows
-
-  Options
-    --foo  Lorem ipsum. Default: false
+    npm-scripts info patch-release
+    npm-scripts install patch-release
 ```
 
 
 ## API
 
-### npmScripts(input, [options])
+### npmScripts.info(title)
 
-#### input
+#### title
 
-*Required*  
+*Required*
 Type: `string`
 
-Lorem ipsum.
+### npmScripts.install(title)
 
-#### options
+#### title
 
-##### foo
-
-Type: `boolean`  
-Default: `false`
-
-Lorem ipsum.
-
+*Required*
+Type: `string`
 
 ## License
 
